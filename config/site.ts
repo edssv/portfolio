@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
     instagramProfile: 'https://instagram.com/edssv',
     githubProfile: 'https://github.com/edssv',
     telegramProfile: 'https://t.me/forever_better',
-    github: 'https://github.com/edssv/aboutme',
+    github: 'https://github.com/edssv/portfolio',
   },
   creator: 'Эдуард Сысоев',
 };

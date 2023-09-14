@@ -1,11 +1,10 @@
 import { siteConfig } from '@/config/site';
 import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Pacifico } from 'next/font/google';
+import { Inter, Pacifico } from 'next/font/google';
+import { cn } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'], weight: ['400'] });
-export const pacifico = Pacifico({ subsets: ['cyrillic'], weight: ['400'] });
+const pacifico = Pacifico({ subsets: ['cyrillic'], weight: ['400'], variable: '--font-pacifico' });
 
 export const metadata = {
   title: {
@@ -17,7 +16,7 @@ export const metadata = {
   authors: [
     {
       name: 'Eduard Sysoev',
-      url: 'https://vk.com/sysoeev',
+      url: siteConfig.links.vkProfile,
     },
   ],
   creator: 'Eduard Sysoev',
@@ -31,6 +30,14 @@ export const metadata = {
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
     siteName: siteConfig.name,
   },
   twitter: {
@@ -50,7 +57,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn(inter.className, pacifico.variable)}>{children}</body>
     </html>
   );
 }

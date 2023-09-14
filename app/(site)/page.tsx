@@ -3,7 +3,7 @@ import Image from 'next/image';
 import macImage from '@/assets/images/mac.png';
 import todayPhoto from '@/assets/images/IMG_20211019_160406630.jpg';
 import schoolPhoto from '@/assets/images/IMG_20150522_123204.jpg';
-import { pacifico } from '../layout';
+
 import { cn } from '@/lib/utils';
 import { HomeSlider } from '@/components/home-page/slider';
 import Link from 'next/link';
@@ -30,7 +30,7 @@ export default function Home() {
             <DetailsSection />
             <div className="text-center flex items-center flex-col">
               <Image src={macImage.src} width={148} height={148} alt="Ретро мак" />
-              <h2 className={cn(pacifico.className, 'text-6xl leading-[1.5] lg:text-[120px]')}>Привет</h2>
+              <h2 className={cn('font-pacifico text-6xl leading-[1.5] lg:text-[120px]')}>Привет</h2>
             </div>
             <div className="w-full max-w-7xl">
               <div className="grid xl:grid-cols-2 gap-4">
