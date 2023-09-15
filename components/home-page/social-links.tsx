@@ -4,7 +4,11 @@ import Link from 'next/link';
 export function SocialLinks() {
   return (
     <div className="flex-wrap flex gap-6 xl:gap-12">
-      <Link href={siteConfig.links.vkProfile} className="flex items-center gap-3 hover:text-blue-600 transition-colors">
+      <Link
+        target="_blank"
+        href={siteConfig.links.vkProfile}
+        className="flex items-center gap-3 hover:text-blue-600 transition-colors"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -18,6 +22,7 @@ export function SocialLinks() {
         ВКонтакте
       </Link>
       <Link
+        target="_blank"
         className="flex items-center gap-3 hover:text-blue-400 transition-colors"
         href={siteConfig.links.telegramProfile}
       >
@@ -34,6 +39,7 @@ export function SocialLinks() {
         Телеграм
       </Link>
       <Link
+        target="_blank"
         className="flex items-center gap-3 hover:text-pink-500 transition-colors"
         href={siteConfig.links.instagramProfile}
       >

@@ -15,11 +15,11 @@ export const metadata = {
   keywords: ['Resume', 'Portfolio'],
   authors: [
     {
-      name: 'Eduard Sysoev',
+      name: 'Эдуард Сысоев',
       url: siteConfig.links.vkProfile,
     },
   ],
-  creator: 'Eduard Sysoev',
+  creator: 'Эдуард Сысоев',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },

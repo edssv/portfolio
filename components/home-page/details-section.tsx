@@ -1,3 +1,5 @@
+'use client';
+
 export function DetailsSection() {
   const localTime = new Date().toLocaleString('ru-RU', {
     timeZone: 'Europe/Moscow',
@@ -6,9 +8,9 @@ export function DetailsSection() {
   });
 
   return (
-    <div className="text-[13px] px-6 pt-6 w-full flex justify-between font-bold">
+    <div className="text-[13px] px-6 w-full flex justify-between font-bold">
       <div className="flex gap-4">
-        <span>Проживаю</span>
+        <span className="hidden md:flex">Проживаю</span>
         <span className="text-gray-300">Великий Новгород 🇷🇺</span>
       </div>
       <div className="xl:flex hidden gap-4">
@@ -16,7 +18,7 @@ export function DetailsSection() {
         <span className="text-gray-300">Великий Новгород 🇷🇺</span>
       </div>
       <div className="flex gap-4">
-        <span>Местное время</span>
+        <span className="hidden md:flex">Местное время</span>
         <span className="text-gray-300">{localTime}</span>
       </div>
       <div className="xl:flex hidden gap-4">
