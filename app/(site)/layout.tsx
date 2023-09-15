@@ -18,8 +18,8 @@ export default async function Layout({ children }: LayoutProps) {
         </div>
       </header>
       {children}
-      <footer className="pt-24 px-6 pb-12 bg-black text-gray-300">
-        <div className="mx-auto max-w-7xl flex justify-between text-[13px] font-bold">
+      <footer className="px-6 py-8 bg-black text-gray-300">
+        <div className="mx-auto max-w-6xl flex justify-between text-[13px] font-bold">
           <span>© Эдуард Сысоев</span>
           <span>Портфолио 2023</span>
         </div>

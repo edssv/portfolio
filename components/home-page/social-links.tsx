@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export function SocialLinks() {
   return (
-    <div className="flex-wrap flex gap-6 xl:gap-12">
+    <div className="flex-wrap text-sm flex gap-6 xl:gap-12">
       <Link
         target="_blank"
         href={siteConfig.links.vkProfile}
-        className="flex items-center gap-3 hover:text-blue-600 transition-colors"
+        className="flex items-center gap-2 hover:text-blue-600 transition-colors"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ export function SocialLinks() {
       </Link>
       <Link
         target="_blank"
-        className="flex items-center gap-3 hover:text-blue-400 transition-colors"
+        className="flex items-center gap-2 hover:text-blue-400 transition-colors"
         href={siteConfig.links.telegramProfile}
       >
         <svg
@@ -40,7 +40,7 @@ export function SocialLinks() {
       </Link>
       <Link
         target="_blank"
-        className="flex items-center gap-3 hover:text-pink-500 transition-colors"
+        className="flex items-center gap-2 hover:text-pink-500 transition-colors"
         href={siteConfig.links.instagramProfile}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">

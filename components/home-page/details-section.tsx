@@ -9,21 +9,13 @@ export function DetailsSection() {
 
   return (
     <div className="text-[13px] px-6 w-full flex justify-between font-bold">
-      <div className="flex gap-4">
-        <span className="hidden md:flex">Проживаю</span>
-        <span className="text-gray-300">Великий Новгород 🇷🇺</span>
-      </div>
       <div className="xl:flex hidden gap-4">
-        <span>В настоящее время</span>
+        <span>Место нахождения</span>
         <span className="text-gray-300">Великий Новгород 🇷🇺</span>
       </div>
       <div className="flex gap-4">
         <span className="hidden md:flex">Местное время</span>
         <span className="text-gray-300">{localTime}</span>
-      </div>
-      <div className="xl:flex hidden gap-4">
-        <span>Температура</span>
-        <span className="text-gray-300">18°C</span>
       </div>
     </div>
   );

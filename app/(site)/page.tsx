@@ -25,19 +25,20 @@ export default function Home() {
           </div>
           <HomeSlider />
         </section>
-        <section className="text-gray-100 py-6 bg-black w-full flex justify-center">
-          <div className="max-w-7xl flex w-full items-center flex-col gap-y-16 md:gap-y-28 xl:gap-y-[200px]">
+        <section className="text-gray-100 py-6 relative bg-black w-full flex justify-center">
+          <div className="absolute -top-0.5 w-full border-dashed border-t-4 border-neutral-600" />
+          <div className="max-w-6xl flex w-full items-center flex-col gap-y-16 md:gap-y-28 xl:gap-y-[128px]">
             <DetailsSection />
-            <div className="text-center flex items-center flex-col">
+            <div className="text-center flex flex-col items-center gap-8">
               <Image src={macImage.src} width={148} height={148} alt="Ретро мак" />
-              <h2 className={cn('font-pacifico text-6xl leading-[1.5] lg:text-[120px]')}>Привет</h2>
+              <h2 className={cn('font-pacifico text-6xl leading-[1.5] lg:text-8xl')}>Привет</h2>
             </div>
-            <div className="w-full max-w-7xl">
+            <div className="w-full max-w-6xl">
               <div className="grid xl:grid-cols-2 gap-4">
                 <Card>
                   <div className="flex flex-col h-full justify-center">
-                    <h3 className="text-2xl lg:text-4xl font-bold mb-6">Почему я полюбил программирование?</h3>
-                    <p className="text-sm xl:text-lg leading-4 xl:leading-[21px] text-gray-300">
+                    <h3 className="text-xl lg:text-3xl font-bold mb-6">Почему я полюбил программирование?</h3>
+                    <p className="text-sm xl:text-base xl:leading-[20px] leading-4 text-gray-300">
                       Когда-то давно, я случайно попал на курс по основам программирования. На тот момент я не знал
                       ничего о кодировании и даже не представлял, что это такое. Однако, с самого первого урока, я
                       понял, что это занятие мне нравится.
@@ -58,51 +59,41 @@ export default function Home() {
                       стремлюсь узнать что-то новое и совершенствоваться в своих навыках. В мире программирования всегда
                       есть что-то новое для изучения, новые технологии и языки программирования, которые можно освоить.
                       Это постоянно мотивирует меня становиться лучше и лучше.
-                      <br />
-                      <br />
-                      Таким образом, программирование стало моим любимым занятием из-за свободы творчества, возможности
-                      работать из дома и неограниченных возможностей для саморазвития. Я рад, что случайно открыл для
-                      себя это увлекательное и практичное занятие, которое принесло мне столько радости и
-                      удовлетворения.
                     </p>
                   </div>
                 </Card>
-                <Card className="!py-[140px]">
-                  <div className="relative">
+                <Card className="xl:py-10 flex flex-col md:flex-row xl:flex-col md:justify-around xl:justify-center">
+                  <div className="relative z-10">
                     <Image
                       src={todayPhoto.src}
                       alt="Пробежка на стадионе"
-                      className="rounded-xl w-auto h-auto rotate-6 shadow-xl"
+                      className="rounded-xl mx-auto w-auto h-60 xl:h-72 rotate-6 shadow-xl"
                       sizes="50vw"
                       width="0"
                       height="0"
                     />
-                    <span className="text-xl font-bold -top-14 left-12 absolute rotate-6 text-gray-300">
-                      На стадионе после пробежки
-                    </span>
+                    <div className="rounded-xl top-0  w-72 sm:w-80 xl:w-full left-1/2 -translate-x-1/2 max-w-[400px] absolute -z-10 h-60 xl:h-72 bg-pink-600 opacity-80 -rotate-12" />
                   </div>
-                  <div className="relative">
+                  <div className="relative z-10">
                     <Image
                       src={schoolPhoto.src}
                       alt="Школьная фотография"
-                      className="rounded-xl w-auto h-auto -rotate-6 shadow-xl"
+                      className="rounded-xl mx-auto w-auto h-60 xl:h-72 -rotate-6 shadow-xl"
                       sizes="50vw"
                       width="0"
                       height="0"
                     />
-                    <span className="text-xl font-bold -bottom-12 right-2 absolute -rotate-6 text-gray-300">
-                      Мой последний звонок в школе - 2015
-                    </span>
+                    <div className="rounded-xl top-0 w-72 sm:w-80 left-1/2 xl:w-full -translate-x-1/2 xl:max-w-[400px] max-w-xs absolute -z-10 h-60 xl:h-72 bg-blue-500 opacity-80 rotate-12" />
                   </div>
                 </Card>
                 <Card>
-                  <h3 className="text-2xl lg:text-4xl font-bold mb-6">Мое первое видео</h3>
-                  <p className="text-lg max-w-md text-gray-300">
+                  <h3 className="text-xl lg:text-3xl font-bold mb-6">Мое первое видео</h3>
+                  <p className="text-base max-w-md text-gray-300">
                     Я записал небольшое видео для тебя, в котором я расскажу о небольшой CSS фишке.
                   </p>
                   <Link
                     target="_blank"
-                    className="mt-8 hover:text-red-500 flex gap-2 transition-colors"
+                    className="mt-8 hover:text-red-500 font-bold flex gap-2 transition-colors"
                     href="https://www.youtube.com/watch?v=dYZL8q_769M"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
@@ -116,10 +107,9 @@ export default function Home() {
                     Смотреть на YouTube
                   </Link>
                 </Card>
-
                 <Card>
-                  <h3 className="text-2xl lg:text-4xl font-bold mb-6">5 Фактов обо мне</h3>
-                  <div className="text-md xl:text-lg font-normal text-gray-300">
+                  <h3 className="text-xl lg:text-3xl font-bold mb-6">5 Фактов обо мне</h3>
+                  <div className="text-md xl:text-base font-normal text-gray-300">
                     Я обожаю путешествовать и исследовать новые места 🌍
                     <br />
                     <br />
@@ -138,7 +128,7 @@ export default function Home() {
                 <SocialLinks />
                 <Link
                   target="_blank"
-                  className="flex gap-2 text-lg font-bold hover:text-pink-700 transition-colors"
+                  className="flex gap-2 text-base font-bold hover:text-pink-700 transition-colors"
                   href={siteConfig.links.github}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
